@@ -81,7 +81,7 @@ class _RippleCircle extends StatelessWidget {
   Widget build(BuildContext context) {
     return AnimatedBuilder(
       animation: controller,
-      builder: (_, _) {
+      builder: (context, child) {
         double progress = (controller.value + delay) % 1.0;
 
         double size = progress * maxRadius;
